@@ -13,14 +13,14 @@ export default function OurExpertiseSection() {
           <p className="mt-4 text-[16px]  leading-[1.3] font-normal text-[#1E3A8A] sm:text-[14px]">{expertiseData.subtitle}</p>
         </header>
 
-        <div className="mt-[10px]  grid grid-cols-1 gap-8 lg:mt-12 lg:grid-cols-[0.96fr_1.04fr] lg:items-start lg:gap-10">
-          <div className=''>
+        <div className="mt-[10px] grid min-w-0 grid-cols-1 gap-8 lg:mt-12 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-start lg:gap-10">
+          <div className="min-w-0 max-w-full">
             <ExpertiseVisualPanel />
           </div>
 
-          <div className=''>
+          <div className="min-w-0">
             <p className="text-[14px] leading-none font-black tracking-[0.22em] text-[#214bb6]">{expertiseData.eyebrow}</p>
-            <h3 className="mt-3 max-w-[520px] text-[48px] leading-[1.03] font-bold tracking-[-0.02em] text-[#121c2f]">
+            <h3 className="mt-3 max-w-[520px] text-[32px] leading-[1.08] font-bold tracking-[-0.02em] text-[#121c2f] sm:text-[40px] lg:text-[48px] lg:leading-[1.03]">
               {expertiseData.heading}
             </h3>
             <p className="mt-5 max-w-[560px] text-[16px] leading-[1.62] font-semibold text-[#3D4946]">
