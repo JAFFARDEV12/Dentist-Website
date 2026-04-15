@@ -1,5 +1,5 @@
-import care from '../../assets/care.svg'
-import technology from '../../assets/technology.svg'
+import care from '../../assets/Care.svg'
+import technology from '../../assets/Technology.svg'
 export default function ExpertiseVisualPanel() {
   return (
     <div className="grid grid-cols-[276px_276px] gap-3 mt-[15px]">
