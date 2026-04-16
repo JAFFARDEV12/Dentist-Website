@@ -11,7 +11,7 @@ export default function OurExpertiseSection() {
           <h2 className="text-[38px]  font-bold  text-[#101a2f] sm:text-[48px]">
             {expertiseData.title}
           </h2>
-          <p className="mt-4 text-[16px]  leading-[1.3] font-normal text-[#1E3A8A] sm:text-[14px]">{expertiseData.subtitle}</p>
+          <p className="mt-4 text-[16px]  leading-[1.3] font-normal text-[#3D4946] sm:text-[18px]">{expertiseData.subtitle}</p>
         </header>
 
         <div className="mt-[10px] grid min-w-0 grid-cols-1 gap-8 lg:mt-12 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-start lg:gap-10">

@@ -4,7 +4,7 @@ import { servicesData } from '../data/servicesData'
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="scroll-mt-[88px] bg-[#f6f9ff] py-10 sm:py-12 lg:py-14">
+    <section id="services" className="scroll-mt-[88px] bg-[#EFF4FF] py-10 sm:py-12 lg:py-14">
       <div className={PAGE_CONTAINER}>
         <header className="mx-auto max-w-[430px] text-center">
           <h2 className="text-[44px] leading-none font-extrabold tracking-[-0.02em] text-[#0e1829]">Services</h2>

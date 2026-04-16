@@ -5,10 +5,12 @@ import { FALLBACK_DOCTOR_IMAGE, getDoctorImage } from '../data/doctorImages'
 import { formatPhoneDisplay } from '../utils/phoneFormat'
 import phone from '../assets/icons/phone.svg'
 import location from '../assets/icons/location.svg'
+import email from '../assets/icons/email.svg'
 
 export default function BannerSection() {
   const p = usePractice()
   const phonePrimary = formatPhoneDisplay(p.phone, p.location)
+  const emailPrimary = p.email ? p.email : null
   const phoneSecondary = p.phoneSecondary ? formatPhoneDisplay(p.phoneSecondary, p.location) : null
   const sameName = p.practiceName.trim().toLowerCase() === p.dentistOwner.trim().toLowerCase()
   const locationLabel = p.location === 'Canada' ? 'Canada' : 'United States'
@@ -48,6 +50,10 @@ export default function BannerSection() {
 
         <div className="mt-7 space-y-3 text-[15px] font-semibold text-[#1f4bbb] sm:text-[16px]">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
+          <p className="flex items-center gap-2.5 whitespace-nowrap">
+              <img src={email} alt="" className="size-4 object-contain" />
+              abc@gmail.com
+            </p>
             <p className="flex items-center gap-2.5 whitespace-nowrap">
               <img src={phone} alt="" className="size-4 object-contain" />
               {phonePrimary}

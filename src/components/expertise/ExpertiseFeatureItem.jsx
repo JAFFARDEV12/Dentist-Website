@@ -18,7 +18,7 @@ export default function ExpertiseFeatureItem({ feature }) {
         <h4 className="text-[14px] leading-[1.25] font-extrabold text-[#1a1c1c] sm:text-[15px] md:text-[16px]">
           {feature.title}
         </h4>
-        <p className="mt-1 text-[13px] leading-[1.45] font-normal text-[#3d4946] sm:text-[14px] md:text-[16px]">
+        <p className="mt-1 text-[13px] font-normal text-[#3d4946] sm:text-[14px] md:text-[16px]">
           {feature.text}
         </p>
 
