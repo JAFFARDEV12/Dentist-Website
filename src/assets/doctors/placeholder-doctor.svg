@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 500" fill="none" aria-hidden="true">
+  <rect width="610" height="500" fill="#f9fafb"/>
+  <circle cx="305" cy="195" r="72" fill="#dce9ff"/>
+  <path
+    d="M305 285c-68 0-124 42-140 100h280c-16-58-72-100-140-100z"
+    fill="#b6d4f9"
+  />
+  <path
+    d="M245 175c0-33 27-60 60-60s60 27 60 60v20h-120v-20z"
+    fill="#9bb8e8"
+  />
+  <text
+    x="305"
+    y="455"
+    text-anchor="middle"
+    fill="#7a8b9e"
+    font-family="system-ui, sans-serif"
+    font-size="22"
+    font-weight="600"
+  >
+    Photo coming soon
+  </text>
+</svg>

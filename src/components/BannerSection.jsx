@@ -1,7 +1,8 @@
+import { useEffect, useRef, useState } from 'react'
 import { PAGE_CONTAINER } from '../constants/pageLayout'
 import { usePractice } from '../context/PracticeContext'
+import { FALLBACK_DOCTOR_IMAGE, getDoctorImage } from '../data/doctorImages'
 import { formatPhoneDisplay } from '../utils/phoneFormat'
-import doctorReference from '../assets/doctor-profile.svg'
 import phone from '../assets/icons/phone.svg'
 import location from '../assets/icons/location.svg'
 
@@ -11,6 +12,20 @@ export default function BannerSection() {
   const phoneSecondary = p.phoneSecondary ? formatPhoneDisplay(p.phoneSecondary, p.location) : null
   const sameName = p.practiceName.trim().toLowerCase() === p.dentistOwner.trim().toLowerCase()
   const locationLabel = p.location === 'Canada' ? 'Canada' : 'United States'
+
+  const [bannerSrc, setBannerSrc] = useState(() => getDoctorImage(p.slug))
+  const fallbackUsedRef = useRef(false)
+
+  useEffect(() => {
+    fallbackUsedRef.current = false
+    setBannerSrc(getDoctorImage(p.slug))
+  }, [p.slug])
+
+  const handleBannerError = () => {
+    if (fallbackUsedRef.current) return
+    fallbackUsedRef.current = true
+    setBannerSrc(FALLBACK_DOCTOR_IMAGE)
+  }
 
   return (
     <section
@@ -54,8 +69,9 @@ export default function BannerSection() {
 
       <div className="w-full max-w-[610px] overflow-hidden rounded-[32px] bg-[#f9fafb] shadow-[0_5px_20px_rgba(16,28,52,0.04)] lg:rounded-[38px]">
         <img
-          src={doctorReference}
-          alt=""
+          src={bannerSrc}
+          alt={p.practiceName}
+          onError={handleBannerError}
           className="h-[350px] w-full object-cover object-right sm:h-[420px] lg:h-[500px]"
         />
       </div>
