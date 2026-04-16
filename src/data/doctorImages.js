@@ -9,7 +9,7 @@
  */
 
 import { PRACTICES } from './practices.js'
-import placeholderDoctor from '../assets/doctors/placeholder-doctor.svg'
+import placeholderDoctor from '../assets/doctors/placeholder-doctor.png'
 
 /** Shown when no bundled asset exists for a slug or when the image fails to load */
 export const FALLBACK_DOCTOR_IMAGE = placeholderDoctor
