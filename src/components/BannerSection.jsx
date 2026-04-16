@@ -67,7 +67,7 @@ export default function BannerSection() {
         </div>
       </div>
 
-      <div className="w-full max-w-[508px] overflow-hidden rounded-[32px] bg-[#f9fafb] shadow-[0_5px_20px_rgba(16,28,52,0.04)] lg:rounded-[38px]">
+      <div className="w-full max-w-[458px] overflow-hidden rounded-[32px] bg-[#f9fafb] shadow-[0_5px_20px_rgba(16,28,52,0.04)] lg:rounded-[38px]">
         <img
           src={bannerSrc}
           alt={p.practiceName}

@@ -18,14 +18,25 @@ export const FALLBACK_DOCTOR_IMAGE = placeholderDoctor
  * Shared “real doctor” stock image used for every practice unless overridden.
  * Replace this single filename when you swap in a new default asset.
  */
-const DEFAULT_DOCTOR_PHOTO_FILENAME = 'doctor-img.png'
+const DEFAULT_DOCTOR_PHOTO_FILENAME = 'doctor-profile.svg'
 
 /**
  * Slug → filename in `src/assets/doctors/`. Only list entries that differ from the default.
  * Add lines here as unique photos become available.
  */
 const DOCTOR_IMAGE_FILENAME_OVERRIDES = {
-  'dr-m-shorser': 'Dr.-Shorser.webp',
+  'dr-m-shorser': 'AI-Doctor-img.webp',
+  'AI-Doctor-img.webp': 'AI-Doctor-img.webp',
+  'reyes-s-dr': 'AI-Doctor-img.webp',
+  'dr-george-elias': 'AI-Doctor-img.webp',
+  'dr-yaw-okraku': 'AI-Doctor-img.webp',
+  'dr-tom-veiledal': 'AI-Doctor-img.webp',
+  'dr-s-fenwick-dr-r-klein-associates-64': 'AI-Doctor-img.webp',
+  'dr-s-fenwick-dr-r-klein-associates': 'AI-Doctor-img.webp',
+  'invisalign-toronto': 'AI-Doctor-img.webp',
+  'upper-beaches-dental': 'AI-Doctor-img.webp',
+  'california-dental-group-of-huntington-beach': 'AI-Doctor-img.webp',
+  
 }
 
 const PRACTICE_SLUGS = PRACTICES.map((p) => p.slug)
