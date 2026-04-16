@@ -1,6 +1,13 @@
 import RatingStars from './RatingStars'
 import ReviewerAvatar from './ReviewerAvatar'
 
+/** Swap placeholder doctor names with the active practice name (all 70 routes). */
+export function personalizeTestimonialQuote(quote, practiceName) {
+  if (!practiceName?.trim()) return quote
+  const name = practiceName.trim()
+  return quote.replaceAll('Dr. John Doe', name).replaceAll('John Doe', name)
+}
+
 /** Strip wrapping quotes so the large decorative mark is not duplicated on featured cards */
 function featuredQuoteBody(quote) {
   let q = quote.trim()
@@ -18,9 +25,9 @@ function featuredQuoteBody(quote) {
   return q
 }
 
-export default function TestimonialCard({ testimonial, featured = false }) {
+export default function TestimonialCard({ testimonial, featured = false, practiceName = '' }) {
   if (featured) {
-    const quoteText = featuredQuoteBody(testimonial.quote)
+    const quoteText = featuredQuoteBody(personalizeTestimonialQuote(testimonial.quote, practiceName))
 
     return (
       <article className="flex h-full min-h-0 w-full min-w-0 flex-col rounded-[30px] bg-[#f3f8ff] px-6 py-8 sm:px-8 md:px-10 md:py-9 lg:min-h-[557px] lg:rounded-[32px] lg:p-12">
@@ -54,7 +61,7 @@ export default function TestimonialCard({ testimonial, featured = false }) {
         <RatingStars count={testimonial.rating} className="mt-1" />
       </header>
       <blockquote className="mt-5 text-[18px] leading-[29.25px] font-normal italic text-[#05345C]">
-        {testimonial.quote}
+        {personalizeTestimonialQuote(testimonial.quote, practiceName)}
       </blockquote>
       <footer className="mt-6 pt-0">
         <p className="text-[17px] leading-none font-extrabold text-[#05345C] md:text-[20px]">{testimonial.name}</p>

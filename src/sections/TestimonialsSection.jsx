@@ -1,8 +1,11 @@
 import { PAGE_CONTAINER } from '../constants/pageLayout'
+import { usePractice } from '../context/PracticeContext'
 import TestimonialCard from '../components/testimonials/TestimonialCard'
 import { testimonialsData } from '../data/testimonialsData'
 
 export default function TestimonialsSection() {
+  const { practiceName } = usePractice()
+
   return (
     <section id="testimonials" className="scroll-mt-[88px] bg-white py-12 sm:py-16 lg:py-20">
       <div className={PAGE_CONTAINER}>
@@ -17,11 +20,11 @@ export default function TestimonialsSection() {
 
         <div className="mt-8 grid w-full min-w-0 grid-cols-1 gap-4 lg:mt-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:items-stretch lg:gap-5">
           <div className="min-w-0">
-            <TestimonialCard testimonial={testimonialsData.featured} featured />
+            <TestimonialCard testimonial={testimonialsData.featured} featured practiceName={practiceName} />
           </div>
           <div className="grid min-w-0 grid-cols-1 gap-4 lg:gap-5">
             {testimonialsData.secondary.map((item) => (
-              <TestimonialCard key={item.id} testimonial={item} />
+              <TestimonialCard key={item.id} testimonial={item} practiceName={practiceName} />
             ))}
           </div>
         </div>

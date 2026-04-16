@@ -22,8 +22,8 @@ export default function BannerSection() {
           {p.dentistOwner}
         </h1>
 
-        <p className="mt-3 text-[clamp(1.25rem,1rem+1.5vw,3.125rem)] leading-[1.1] font-black tracking-[-0.02em] text-[#101829] sm:text-[34px] lg:text-[50px]">
-          {sameName ? 'Trusted dental care for your family' : p.practiceName}
+        <p className="mt-3 text-[clamp(1.15rem,1rem+1.5vw,3.125rem)] leading-[1.1] font-black tracking-[-0.02em] text-[#101829] sm:text-[34px] lg:text-[50px]">
+          {sameName ? 'Lead dental surgeon' : p.practiceName}
         </p>
 
         <p className="mt-7 max-w-[470px] text-[16px] leading-[1.62] font-medium text-[#2f3748] sm:text-[18px]">
