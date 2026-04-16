@@ -12,7 +12,7 @@ export default function BannerSection() {
     >
       <div className="max-w-[520px]">
         <h1 className="text-[48px] leading-[1.06] font-extrabold tracking-[-0.03em] text-[#0e1628] sm:text-[56px] lg:text-[64px]">
-          Dr. <span className="text-[#1a4cc0]">John</span> Doe
+          Dr. <span className="text-[#1E3A8A]">John</span> Doe
         </h1>
 
         <p className="mt-3 text-[28px] leading-[1.1] font-black tracking-[-0.02em] text-[#101829] sm:text-[34px] lg:text-[50px]">

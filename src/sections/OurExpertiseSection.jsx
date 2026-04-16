@@ -8,7 +8,7 @@ export default function OurExpertiseSection() {
     <section id="expertise" className="scroll-mt-[88px] bg-white py-12 sm:py-16 lg:py-20">
       <div className={PAGE_CONTAINER}>
         <header className=" mx-auto  max-w-[680px] text-center">
-          <h2 className="text-[38px]  font-semibold  text-[#101a2f] sm:text-[48px]">
+          <h2 className="text-[38px]  font-bold  text-[#101a2f] sm:text-[48px]">
             {expertiseData.title}
           </h2>
           <p className="mt-4 text-[16px]  leading-[1.3] font-normal text-[#1E3A8A] sm:text-[14px]">{expertiseData.subtitle}</p>
