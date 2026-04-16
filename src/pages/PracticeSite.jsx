@@ -20,7 +20,7 @@ export default function PracticeSite() {
 
   return (
     <PracticeContext.Provider value={practice}>
-      <main className="min-h-screen overflow-x-hidden bg-[f5f9f9]">
+      <main className="min-h-screen overflow-x-hidden bg-[#f5f9f9]">
         <Header />
         <BannerSection />
         <ServicesSection />
