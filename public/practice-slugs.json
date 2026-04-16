@@ -1,0 +1,352 @@
+[
+  {
+    "practiceNo": 1,
+    "slug": "california-dental-group-of-huntington-beach",
+    "practiceName": "California Dental Group of Huntington Beach"
+  },
+  {
+    "practiceNo": 2,
+    "slug": "dentist-usa",
+    "practiceName": "Dentist USA"
+  },
+  {
+    "practiceNo": 3,
+    "slug": "an-lac-dental-inc",
+    "practiceName": "An Lac Dental, Inc."
+  },
+  {
+    "practiceNo": 4,
+    "slug": "hispano-dental-care-selma",
+    "practiceName": "Hispano Dental Care Selma"
+  },
+  {
+    "practiceNo": 5,
+    "slug": "st-therese-family-dental-care",
+    "practiceName": "St Therese Family Dental Care"
+  },
+  {
+    "practiceNo": 6,
+    "slug": "forester-dental",
+    "practiceName": "Forester Dental"
+  },
+  {
+    "practiceNo": 7,
+    "slug": "all-smiles-family-children-dentistry",
+    "practiceName": "All Smiles Family & Children Dentistry"
+  },
+  {
+    "practiceNo": 8,
+    "slug": "selma-family-dental",
+    "practiceName": "Selma Family Dental"
+  },
+  {
+    "practiceNo": 9,
+    "slug": "dentistry-anaheim-hills",
+    "practiceName": "Dentistry Anaheim Hills"
+  },
+  {
+    "practiceNo": 10,
+    "slug": "california-valley-endodontics",
+    "practiceName": "California Valley Endodontics"
+  },
+  {
+    "practiceNo": 11,
+    "slug": "donald-j-kinosian-inc",
+    "practiceName": "Donald J Kinosian Inc"
+  },
+  {
+    "practiceNo": 12,
+    "slug": "owji-dental-corporation",
+    "practiceName": "Owji Dental Corporation"
+  },
+  {
+    "practiceNo": 13,
+    "slug": "clovis-gentle-dental-care",
+    "practiceName": "Clovis Gentle Dental Care"
+  },
+  {
+    "practiceNo": 14,
+    "slug": "california-smile-dental-group-bustati-mohammad-dds",
+    "practiceName": "California Smile Dental Group: Bustati Mohammad DDS"
+  },
+  {
+    "practiceNo": 15,
+    "slug": "frieden-richard-a-dds",
+    "practiceName": "Frieden, Richard A DDS"
+  },
+  {
+    "practiceNo": 16,
+    "slug": "west-los-angeles-dentistry",
+    "practiceName": "West Los Angeles Dentistry"
+  },
+  {
+    "practiceNo": 17,
+    "slug": "dr-frank-laaly-dds",
+    "practiceName": "Dr. Frank Laaly, DDS"
+  },
+  {
+    "practiceNo": 18,
+    "slug": "william-faulkner-dds",
+    "practiceName": "William Faulkner, DDS"
+  },
+  {
+    "practiceNo": 19,
+    "slug": "top-implant-cen-ter",
+    "practiceName": "Top Implant Cen Ter"
+  },
+  {
+    "practiceNo": 20,
+    "slug": "jonathan-m-engel-dds",
+    "practiceName": "Jonathan M. Engel, DDS"
+  },
+  {
+    "practiceNo": 21,
+    "slug": "tracy-g-golden-dmd",
+    "practiceName": "Tracy G Golden, Dmd"
+  },
+  {
+    "practiceNo": 22,
+    "slug": "wilshire-smile-studio-los-angeles-dentist-cosmetic-and-emergency-dentistry",
+    "practiceName": "Wilshire Smile Studio - Los Angeles Dentist, Cosmetic and Emergency Dentistry"
+  },
+  {
+    "practiceNo": 23,
+    "slug": "daryl-cranon-d-d-s",
+    "practiceName": "Daryl Cranon, D.D.S."
+  },
+  {
+    "practiceNo": 24,
+    "slug": "st-george-dental-clinic",
+    "practiceName": "St. George Dental Clinic"
+  },
+  {
+    "practiceNo": 25,
+    "slug": "premier-dental-clinic",
+    "practiceName": "Premier Dental Clinic"
+  },
+  {
+    "practiceNo": 26,
+    "slug": "downtown-dental",
+    "practiceName": "Downtown Dental"
+  },
+  {
+    "practiceNo": 27,
+    "slug": "thien-nguyen-dds",
+    "practiceName": "Thien Nguyen, DDS"
+  },
+  {
+    "practiceNo": 28,
+    "slug": "edward-lew-dmd",
+    "practiceName": "Edward Lew, DMD"
+  },
+  {
+    "practiceNo": 29,
+    "slug": "jon-bauer-and-mitchell-galper-dds",
+    "practiceName": "Jon Bauer and Mitchell Galper, DDS"
+  },
+  {
+    "practiceNo": 30,
+    "slug": "samet-dental-corp",
+    "practiceName": "Samet Dental Corp"
+  },
+  {
+    "practiceNo": 31,
+    "slug": "devang-m-gandhi-dds",
+    "practiceName": "Devang M Gandhi, DDS"
+  },
+  {
+    "practiceNo": 32,
+    "slug": "children-adults-dental-office",
+    "practiceName": "Children & Adult's Dental Office"
+  },
+  {
+    "practiceNo": 33,
+    "slug": "lim-george-d-dmd",
+    "practiceName": "Lim, George D., DMD"
+  },
+  {
+    "practiceNo": 34,
+    "slug": "mohammed-navid-mapara-dmd",
+    "practiceName": "Mohammed Navid Mapara, DMD"
+  },
+  {
+    "practiceNo": 35,
+    "slug": "michael-delmont",
+    "practiceName": "Michael Delmont"
+  },
+  {
+    "practiceNo": 36,
+    "slug": "crenshaw-professional-dental-center",
+    "practiceName": "Crenshaw Professional Dental Center"
+  },
+  {
+    "practiceNo": 37,
+    "slug": "kids-dental-kare",
+    "practiceName": "Kids Dental Kare"
+  },
+  {
+    "practiceNo": 38,
+    "slug": "jose-t-sauz-d-d-s",
+    "practiceName": "Jose T. Sauz D.d.s"
+  },
+  {
+    "practiceNo": 39,
+    "slug": "dr-fernando-f-barreto-dds",
+    "practiceName": "Dr. Fernando F Barreto, DDS"
+  },
+  {
+    "practiceNo": 40,
+    "slug": "edward-lopez",
+    "practiceName": "Edward Lopez"
+  },
+  {
+    "practiceNo": 41,
+    "slug": "jabeen-mah-khan-dds-inc",
+    "practiceName": "Jabeen Mah Khan DDS Inc"
+  },
+  {
+    "practiceNo": 42,
+    "slug": "cheryl-diane-bingham-dds",
+    "practiceName": "Cheryl Diane Bingham, DDS"
+  },
+  {
+    "practiceNo": 43,
+    "slug": "professional-dental-care",
+    "practiceName": "Professional Dental Care"
+  },
+  {
+    "practiceNo": 44,
+    "slug": "john-kim-other",
+    "practiceName": "John Kim, Other"
+  },
+  {
+    "practiceNo": 45,
+    "slug": "randy-l-chen-dds",
+    "practiceName": "Randy L Chen, DDS"
+  },
+  {
+    "practiceNo": 46,
+    "slug": "dr-ernest-nagamatsu",
+    "practiceName": "Dr. Ernest Nagamatsu"
+  },
+  {
+    "practiceNo": 47,
+    "slug": "best-family-dentist",
+    "practiceName": "Best Family Dentist"
+  },
+  {
+    "practiceNo": 48,
+    "slug": "dr-bonnie-k-krystal-dds",
+    "practiceName": "Dr. Bonnie K. Krystal, DDS"
+  },
+  {
+    "practiceNo": 49,
+    "slug": "glenhurst-dental-group",
+    "practiceName": "Glenhurst Dental Group"
+  },
+  {
+    "practiceNo": 50,
+    "slug": "myriam-m-soler-dds",
+    "practiceName": "Myriam M Soler, DDS"
+  },
+  {
+    "practiceNo": 51,
+    "slug": "dr-paul-s-monczka",
+    "practiceName": "Dr Paul S Monczka"
+  },
+  {
+    "practiceNo": 52,
+    "slug": "oral-surgery-practice",
+    "practiceName": "Oral Surgery Practice"
+  },
+  {
+    "practiceNo": 53,
+    "slug": "crossways-family-dental",
+    "practiceName": "Crossways Family Dental"
+  },
+  {
+    "practiceNo": 54,
+    "slug": "dr-alfred-chu",
+    "practiceName": "Dr. Alfred Chu"
+  },
+  {
+    "practiceNo": 55,
+    "slug": "dr-bruce-stanley",
+    "practiceName": "Dr Bruce Stanley"
+  },
+  {
+    "practiceNo": 56,
+    "slug": "rozansky-k-dr",
+    "practiceName": "Rozansky K Dr"
+  },
+  {
+    "practiceNo": 57,
+    "slug": "cudmore-c-j-dr",
+    "practiceName": "Cudmore C J Dr"
+  },
+  {
+    "practiceNo": 58,
+    "slug": "mazzatto-anthony-dr",
+    "practiceName": "Mazzatto Anthony Dr"
+  },
+  {
+    "practiceNo": 59,
+    "slug": "dental-arts-at-lawrence-invisalign-toronto",
+    "practiceName": "Dental Arts At Lawrence-Invisalign Toronto"
+  },
+  {
+    "practiceNo": 60,
+    "slug": "dr-george-elias",
+    "practiceName": "Dr George Elias"
+  },
+  {
+    "practiceNo": 61,
+    "slug": "salama-sam-dr",
+    "practiceName": "Salama Sam Dr"
+  },
+  {
+    "practiceNo": 62,
+    "slug": "invisalign-toronto",
+    "practiceName": "Invisalign Toronto"
+  },
+  {
+    "practiceNo": 63,
+    "slug": "dr-s-fenwick-dr-r-klein-associates",
+    "practiceName": "Dr. S Fenwick, Dr. R Klein & Associates"
+  },
+  {
+    "practiceNo": 64,
+    "slug": "dr-s-fenwick-dr-r-klein-associates-64",
+    "practiceName": "Dr. S Fenwick, Dr. R Klein & Associates"
+  },
+  {
+    "practiceNo": 65,
+    "slug": "dr-yaw-okraku",
+    "practiceName": "Dr Yaw Okraku"
+  },
+  {
+    "practiceNo": 66,
+    "slug": "dr-tom-veiledal",
+    "practiceName": "Dr Tom Veiledal"
+  },
+  {
+    "practiceNo": 67,
+    "slug": "dr-m-shorser",
+    "practiceName": "Dr M Shorser"
+  },
+  {
+    "practiceNo": 68,
+    "slug": "reyes-s-dr",
+    "practiceName": "Reyes S Dr"
+  },
+  {
+    "practiceNo": 69,
+    "slug": "upper-beaches-dental",
+    "practiceName": "Upper Beaches Dental"
+  },
+  {
+    "practiceNo": 70,
+    "slug": "park-lawn-smiles-dental",
+    "practiceName": "Park Lawn Smiles Dental"
+  }
+]

@@ -33,17 +33,24 @@ export default function OurExpertiseSection() {
               <ExpertiseFeatureItem feature={expertiseData.highlights[1]} />
             </div>
 
-            <div className="mt-6 inline-grid max-w-full grid-cols-2 justify-items-start gap-x-3 gap-y-2">
-              {expertiseData.tags.map((tag, index) => (
-                <span
-                  key={tag}
-                  className={`inline-flex h-8 items-center justify-center whitespace-nowrap rounded-[99px] bg-[#DCE9FF] px-4 text-[12px] font-semibold text-[#5d6780] ${
-                    index === 2 ? 'col-span-2 w-max max-w-full' : ''
-                  }`}
-                >
-                  {tag}
-                </span>
-              ))}
+            <div className="mt-6 space-y-3">
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                {expertiseData.tags.slice(0, 2).map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-flex h-8 shrink-0 items-center justify-center whitespace-nowrap rounded-[99px] bg-[#DCE9FF] px-4 text-[12px] font-semibold text-[#5d6780]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              {expertiseData.tags[2] && (
+                <div className="flex">
+                  <span className="inline-flex h-8 shrink-0 items-center justify-center whitespace-nowrap rounded-[99px] bg-[#DCE9FF] px-4 text-[12px] font-semibold text-[#5d6780]">
+                    {expertiseData.tags[2]}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>

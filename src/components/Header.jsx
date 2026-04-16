@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { PAGE_CONTAINER } from '../constants/pageLayout'
+import { usePractice } from '../context/PracticeContext'
 
 const NAV_ITEMS = [
   { id: 'about', label: 'About Me' },
@@ -10,6 +12,20 @@ const NAV_ITEMS = [
 ]
 
 const HEADER_OFFSET = 96
+
+function getBrandClasses(name) {
+  const length = name.trim().length
+
+  if (length >= 56) {
+    return 'max-w-[min(100%,13rem)] text-[15px] font-semibold sm:max-w-[18rem] sm:text-[17px] md:max-w-[24rem] md:text-[18px] lg:max-w-[30rem] lg:text-[20px]'
+  }
+
+  if (length >= 40) {
+    return 'max-w-[min(100%,13rem)] text-[16px] font-semibold sm:max-w-[19rem] sm:text-[18px] md:max-w-[26rem] md:text-[19px] lg:max-w-[32rem] lg:text-[22px]'
+  }
+
+  return 'max-w-[min(100%,13rem)] text-[18px] font-bold sm:max-w-[20rem] sm:text-[20px] md:max-w-[28rem] md:text-[22px] lg:max-w-[34rem] lg:text-[26px]'
+}
 
 function getActiveSectionFromScroll() {
   const scrollY = window.scrollY
@@ -27,9 +43,12 @@ function getActiveSectionFromScroll() {
 }
 
 export default function Header() {
+  const practice = usePractice()
+  const { pathname } = useLocation()
   const [activeSection, setActiveSection] = useState(NAV_ITEMS[0].id)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const ignoreScrollUntilRef = useRef(0)
+  const brandClasses = getBrandClasses(practice.practiceName)
 
   useEffect(() => {
     const onScrollOrResize = () => {
@@ -56,18 +75,19 @@ export default function Header() {
   return (
     <header className="border-b border-[#eef0f4] bg-[white]">
       <div className={`flex h-[72px] items-center justify-between md:h-[78px] ${PAGE_CONTAINER}`}>
-        <a
-          href="#about"
-          className="text-[24px] leading-none font-bold text-[#1E3A8A] md:text-[29px] line-height-[32px]"
+        <Link
+          to={`${pathname}#about`}
+          className={`text-left leading-tight text-[#1E3A8A] ${brandClasses}`}
+          title={practice.practiceName}
           onClick={(e) => {
             e.preventDefault()
             navigateToSection('about')
           }}
         >
-          Clinical Dentistry
-        </a>
+          <span className="block whitespace-normal">{practice.practiceName}</span>
+        </Link>
 
-        <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-6 lg:gap-9 md:flex" aria-label="Primary">
           {NAV_ITEMS.map((item) => {
             const isActive = activeSection === item.id
             return (

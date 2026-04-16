@@ -1,21 +1,12 @@
-import Header from './components/Header'
-import BannerSection from './components/BannerSection'
-import ServicesSection from './sections/ServicesSection'
-import OurExpertiseSection from './sections/OurExpertiseSection'
-import PatientFaqsSection from './sections/PatientFaqsSection'
-import TestimonialsSection from './sections/TestimonialsSection'
-import FooterSection from './sections/FooterSection'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { DEFAULT_SLUG } from './data/practices'
+import PracticeSite from './pages/PracticeSite'
 
 export default function App() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[f5f9f9]">
-      <Header />
-      <BannerSection />
-      <ServicesSection />
-      <OurExpertiseSection />
-      <PatientFaqsSection />
-      <TestimonialsSection />
-      <FooterSection />
-    </main>
+    <Routes>
+      <Route path="/" element={<Navigate to={`/${DEFAULT_SLUG}`} replace />} />
+      <Route path="/:slug" element={<PracticeSite />} />
+    </Routes>
   )
 }
