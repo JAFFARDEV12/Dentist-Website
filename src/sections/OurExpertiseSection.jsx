@@ -5,7 +5,7 @@ import { expertiseData } from '../data/expertiseData'
 
 export default function OurExpertiseSection() {
   return (
-    <section className="bg-white py-12 sm:py-16 lg:py-20">
+    <section id="expertise" className="scroll-mt-[88px] bg-white py-12 sm:py-16 lg:py-20">
       <div className={PAGE_CONTAINER}>
         <header className=" mx-auto  max-w-[680px] text-center">
           <h2 className="text-[38px]  font-semibold  text-[#101a2f] sm:text-[48px]">

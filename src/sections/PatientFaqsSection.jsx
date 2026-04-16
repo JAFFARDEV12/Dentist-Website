@@ -7,7 +7,7 @@ export default function PatientFaqsSection() {
   const [openFaqId, setOpenFaqId] = useState(patientFaqsData[0].id)
 
   return (
-    <section className="bg-[#f6f9ff] py-12 sm:py-16 lg:py-[74px]">
+    <section id="faqs" className="scroll-mt-[88px] bg-[#f6f9ff] py-12 sm:py-16 lg:py-[74px]">
       <div className={PAGE_CONTAINER}>
         <header className="mx-auto max-w-[520px] text-center">
           <h2 className="text-[36px]  font-bold tracking-[-0.01em] text-[#101a2f] sm:text-[46px]">
