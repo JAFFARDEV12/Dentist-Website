@@ -1,3 +1,4 @@
+import { PAGE_CONTAINER } from '../constants/pageLayout'
 import ExpertiseFeatureItem from '../components/expertise/ExpertiseFeatureItem'
 import ExpertiseVisualPanel from '../components/expertise/ExpertiseVisualPanel'
 import { expertiseData } from '../data/expertiseData'
@@ -5,7 +6,7 @@ import { expertiseData } from '../data/expertiseData'
 export default function OurExpertiseSection() {
   return (
     <section className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-14">
+      <div className={PAGE_CONTAINER}>
         <header className=" mx-auto  max-w-[680px] text-center">
           <h2 className="text-[38px]  font-semibold  text-[#101a2f] sm:text-[48px]">
             {expertiseData.title}
@@ -32,11 +33,13 @@ export default function OurExpertiseSection() {
               <ExpertiseFeatureItem feature={expertiseData.highlights[1]} />
             </div>
 
-            <div className="mt-6 grid grid-cols-2 gap-2 max-w-[254px]">
-              {expertiseData.tags.map((tag) => (
+            <div className="mt-6 inline-grid max-w-full grid-cols-2 justify-items-start gap-x-3 gap-y-2">
+              {expertiseData.tags.map((tag, index) => (
                 <span
                   key={tag}
-                  className="flex h-[32px] w-[123px] items-center rounded-[99px] bg-[#DCE9FF] px-4 py-2 text-[12px]  font-semibold text-[#5d6780]"
+                  className={`inline-flex h-8 items-center justify-center whitespace-nowrap rounded-[99px] bg-[#DCE9FF] px-4 text-[12px] font-semibold text-[#5d6780] ${
+                    index === 2 ? 'col-span-2 w-max max-w-full' : ''
+                  }`}
                 >
                   {tag}
                 </span>

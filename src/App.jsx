@@ -8,7 +8,7 @@ import FooterSection from './sections/FooterSection'
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-[f5f9f9]">
+    <main className="min-h-screen overflow-x-hidden bg-[f5f9f9]">
       <Header />
       <BannerSection />
       <ServicesSection />

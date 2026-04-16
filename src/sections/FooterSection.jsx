@@ -1,11 +1,12 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
+import { PAGE_CONTAINER } from '../constants/pageLayout'
 import FooterContactItem from '../components/footer/FooterContactItem'
 import { footerData } from '../data/footerData'
 
 export default function FooterSection() {
   return (
     <footer className="border-t border-[#F8FAFC] bg-[#F8FAFC] ">
-      <div className="mx-auto w-full max-w-[1440px] px-6 pt-10 pb-8 md:px-10 lg:px-14">
+      <div className={`pt-10 pb-8 ${PAGE_CONTAINER}`}>
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-10">
           <section className="max-w-[360px]">
             <h3 className="text-[20px] leading-none font-extrabold tracking-[-0.01em] text-[#1345b4]">
@@ -40,8 +41,10 @@ export default function FooterSection() {
         </div>
       </div>
 
-      <div className="border-t border-[#ecf1f8] px-6 py-4 text-center md:px-10 lg:px-14">
-        <p className="text-[13px] leading-none font-medium text-[#95a4bb]">{footerData.copyright}</p>
+      <div className="border-t border-[#ecf1f8]">
+        <div className={`py-4 text-center ${PAGE_CONTAINER}`}>
+          <p className="text-[13px] leading-none font-medium text-[#95a4bb]">{footerData.copyright}</p>
+        </div>
       </div>
     </footer>
   )

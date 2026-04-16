@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PAGE_CONTAINER } from '../constants/pageLayout'
 
 const navigationLinks = ['About Me', 'Services', 'Expertise', 'FAQs', 'Testimonials']
 
@@ -7,7 +8,7 @@ export default function Header() {
 
   return (
     <header className="border-b border-[#eef0f4] bg-[white]">
-      <div className="mx-auto flex h-[72px] w-full max-w-[1440px] items-center justify-between px-6 md:h-[78px] md:px-10 lg:px-14">
+      <div className={`flex h-[72px] items-center justify-between md:h-[78px] ${PAGE_CONTAINER}`}>
         <a
           href="#"
           className="text-[24px] leading-none font-bold text-[#1E3A8A] md:text-[29px] line-height-[32px]"
@@ -45,8 +46,8 @@ export default function Header() {
       </div>
 
       {isMobileMenuOpen && (
-        <nav className="border-t border-[#eef0f4] px-6 py-4 md:hidden">
-          <div className="flex flex-col gap-4">
+        <nav className="border-t border-[#eef0f4] md:hidden">
+          <div className={`flex flex-col gap-4 py-4 ${PAGE_CONTAINER}`}>
             {navigationLinks.map((item, index) => (
               <a
                 key={item}

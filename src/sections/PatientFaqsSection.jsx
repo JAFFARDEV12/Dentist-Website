@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PAGE_CONTAINER } from '../constants/pageLayout'
 import FaqAccordionItem from '../components/faqs/FaqAccordionItem'
 import { patientFaqsData } from '../data/patientFaqsData'
 
@@ -7,7 +8,7 @@ export default function PatientFaqsSection() {
 
   return (
     <section className="bg-[#f6f9ff] py-12 sm:py-16 lg:py-[74px]">
-      <div className="mx-auto w-full max-w-[1440px] px-6 md:px-10 lg:px-14">
+      <div className={PAGE_CONTAINER}>
         <header className="mx-auto max-w-[520px] text-center">
           <h2 className="text-[36px]  font-bold tracking-[-0.01em] text-[#101a2f] sm:text-[46px]">
             Patient FAQs
