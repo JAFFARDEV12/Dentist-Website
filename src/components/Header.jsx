@@ -13,18 +13,26 @@ const NAV_ITEMS = [
 
 const HEADER_OFFSET = 96
 
+/**
+ * Figma base: Plus Jakarta Sans 800, 24px, line-height 32px, letter-spacing -0.6px.
+ * Shorter names keep full size; long names step down so the header layout stays stable.
+ */
 function getBrandClasses(name) {
-  const length = name.trim().length
+  const length = (name ?? '').trim().length
+  const font =
+    "[font-family:'Plus_Jakarta_Sans',ui-sans-serif,system-ui,sans-serif] font-extrabold text-[#1E3A8A]"
 
-  if (length >= 56) {
-    return 'max-w-[min(100%,13rem)] text-[15px] font-semibold sm:max-w-[18rem] sm:text-[17px] md:max-w-[24rem] md:text-[18px] lg:max-w-[30rem] lg:text-[20px]'
+  if (length >= 52) {
+    return `${font} inline-flex min-w-0 max-w-[min(100%,11rem)] items-center text-[14px] leading-5 tracking-[-0.35px] sm:max-w-[15rem] sm:text-[15px] sm:leading-5 sm:tracking-[-0.4px] md:max-w-[20rem] md:text-[16px] md:leading-[22px] md:tracking-[-0.45px] lg:max-w-[26rem] lg:text-[17px] lg:leading-6`
   }
-
-  if (length >= 40) {
-    return 'max-w-[min(100%,13rem)] text-[16px] font-semibold sm:max-w-[19rem] sm:text-[18px] md:max-w-[26rem] md:text-[19px] lg:max-w-[32rem] lg:text-[22px]'
+  if (length >= 38) {
+    return `${font} inline-flex min-w-0 max-w-[min(100%,12rem)] items-center text-[16px] leading-6 tracking-[-0.45px] sm:max-w-[17rem] sm:text-[17px] sm:leading-[24px] sm:tracking-[-0.5px] md:max-w-[24rem] md:text-[18px] md:leading-7 md:tracking-[-0.5px] lg:max-w-[30rem] lg:text-[20px] lg:leading-8`
   }
-
-  return 'max-w-[min(100%,13rem)] text-[18px] font-bold sm:max-w-[20rem] sm:text-[20px] md:max-w-[28rem] md:text-[22px] lg:max-w-[34rem] lg:text-[26px]'
+  if (length >= 26) {
+    return `${font} inline-flex min-w-0 max-w-[min(100%,13rem)] items-center text-[18px] leading-7 tracking-[-0.5px] sm:max-w-[19rem] sm:text-[20px] sm:leading-8 sm:tracking-[-0.55px] md:max-w-[26rem] md:text-[22px] md:leading-8 md:tracking-[-0.58px] lg:max-w-[36rem] lg:text-[24px] lg:leading-8 lg:tracking-[-0.6px]`
+  }
+  // Figma default: 24px / 32px / -0.6px (slightly smaller on the narrowest phones)
+  return `${font} inline-flex min-w-0 max-w-[min(100%,15rem)] items-center text-[20px] leading-7 tracking-[-0.55px] min-[400px]:text-[22px] min-[400px]:leading-8 min-[400px]:tracking-[-0.58px] sm:max-w-[22rem] sm:text-[24px] sm:leading-8 sm:tracking-[-0.6px] md:max-w-[32rem]`
 }
 
 function getActiveSectionFromScroll() {
@@ -77,14 +85,16 @@ export default function Header() {
       <div className={`flex h-[72px] items-center justify-between md:h-[78px] ${PAGE_CONTAINER}`}>
         <Link
           to={`${pathname}#about`}
-          className={`text-left leading-tight text-[#1E3A8A] ${brandClasses}`}
+          className={`min-w-0 shrink pr-2 text-left align-middle md:pr-4 ${brandClasses}`}
           title={practice.practiceName}
           onClick={(e) => {
             e.preventDefault()
             navigateToSection('about')
           }}
         >
-          <span className="block whitespace-normal">{practice.practiceName}</span>
+          <span className="block w-full min-w-0 break-words whitespace-normal align-middle [vertical-align:middle]">
+            {practice.practiceName}
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 lg:gap-9 md:flex" aria-label="Primary">
