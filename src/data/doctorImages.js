@@ -15,9 +15,9 @@
  */
 
 import { PRACTICES } from './practices.js'
-import doctorProfileSvg from '../assets/doctors/doctor-img.png'
-import doctorProfilePng from '../assets/doctors/AI-Doctor-img.webp'
-import placeholderDoctor from '../assets/doctors/doctor-img.png'
+import doctorProfileSvg from '../assets/doctors/doctor-img-1.png'
+import doctorProfilePng from '../assets/doctors/doctor-img.png'
+import placeholderDoctor from '../assets/doctors/AI-Doctor-img.webp'
 
 /** Shown when a slug is unknown or when `<img onError />` runs in the banner */
 export const FALLBACK_DOCTOR_IMAGE = placeholderDoctor
