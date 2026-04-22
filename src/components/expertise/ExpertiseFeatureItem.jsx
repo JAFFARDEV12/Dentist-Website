@@ -11,7 +11,7 @@ export default function ExpertiseFeatureItem({ feature }) {
 
   return (
     <article className="flex w-full min-w-0 items-start gap-4 text-left">
-      <span className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-[#EEF4FF] p-1.5 text-[#2459c4]">
+      <span className="mt-0.5 inline-flex size-10 shrink-0 items-center justify-center rounded-full  p-1.5 text-[#2459c4]">
         <img src={iconSource} alt="" className="h-full w-full object-contain" aria-hidden />
       </span>
       <div className="min-w-0 flex-1 space-y-1.5">
