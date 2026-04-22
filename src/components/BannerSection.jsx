@@ -34,32 +34,6 @@ function renderDoctorName(name) {
   )
 }
 
-function renderPracticeNameWithHighlight(practiceName) {
-  const label = (practiceName ?? '').trim()
-  if (!label) return null
-
-  const match = label.match(/(dental(?:\s+group(?:\s+of)?)?)/i)
-  if (!match || typeof match.index !== 'number') {
-    return label
-  }
-
-  const start = match.index
-  const end = start + match[0].length
-  const before = label.slice(0, start)
-  const highlighted = label.slice(start, end)
-  const after = label.slice(end)
-
-  return (
-    <>
-      {before}
-      <span className="font-extrabold" style={{ color: BLUE_HIGHLIGHT }}>
-        {highlighted}
-      </span>
-      {after}
-    </>
-  )
-}
-
 export default function BannerSection() {
   const p = usePractice()
   const phonePrimary = formatPhoneDisplay(p.phone, p.location)
@@ -116,9 +90,9 @@ export default function BannerSection() {
 
         <div className="mt-7 space-y-3 text-[15px] font-semibold text-[#1f4bbb] sm:text-[16px]">
           <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
-          <p className="flex items-center gap-2.5 whitespace-nowrap">
+            <p className="flex items-center gap-2.5 whitespace-nowrap">
               <img src={email} alt="" className="size-4 object-contain" />
-              abc@gmail.com
+              {emailPrimary || 'abc@gmail.com'}
             </p>
             <p className="flex items-center gap-2.5 whitespace-nowrap">
               <img src={phone} alt="" className="size-4 object-contain" />

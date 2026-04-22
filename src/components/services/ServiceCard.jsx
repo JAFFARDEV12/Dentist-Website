@@ -2,7 +2,7 @@ import ServiceThumbnail from './ServiceThumbnail'
 import arrowleft from '../../assets/icons/arrow-left.svg'
 export default function ServiceCard({ service }) {
   return (
-    <article className="flex w-full max-w-[280px] flex-shrink-0 flex-col gap-[10.8px] overflow-hidden rounded-[32px] bg-white px-4 py-10 opacity-100 shadow-[0_8px_24px_rgba(6,22,48,0.06)] ring-1 ring-[#edf2fb] sm:px-[33px]">
+    <article className="flex w-full max-w-[280px] flex-shrink-0 flex-col gap-[10.8px] overflow-hidden rounded-[32px] bg-white px-4 py-4 opacity-100 shadow-[0_8px_24px_rgba(6,22,48,0.06)] ring-1 ring-[#edf2fb] sm:px-[33px]">
       <div className="mx-auto aspect-[214/192] w-full max-w-[214px] shrink-0 overflow-hidden rounded-[32px]">
         <ServiceThumbnail type={service.type} />
       </div>

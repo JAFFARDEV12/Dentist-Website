@@ -1,91 +1,78 @@
 /**
- * Per-practice banner doctor photos.
+ * Central registry for banner doctor photos (all practices in `PRACTICES` / 70 routes).
  *
- * - Drop image files into `src/assets/doctors/` (webp, png, jpg, jpeg, avif).
- * - Set `DEFAULT_DOCTOR_PHOTO_FILENAME` for the shared stock photo used by most practices.
- * - Add or edit `DOCTOR_IMAGE_FILENAME_OVERRIDES` when a practice gets its own file (value = filename only).
- * - If a file is missing or fails to load in the UI, the banner falls back to `placeholder-doctor.svg`
- *   (see `getDoctorImage` + `BannerSection` onError).
+ * Default behavior
+ * - First half of the practice list → `src/assets/doctor-profile.svg`
+ * - Second half → `src/assets/doctor-profile-1.png`
+ * - Order follows `practices.js` (US + CA, same as URL slugs).
+ *
+ * When a real image fails in the browser, `BannerSection` uses `onError` with
+ * `FALLBACK_DOCTOR_IMAGE` (`src/assets/doctors/placeholder-doctor.svg`).
+ *
+ * To add a one-off photo for a single slug later: import the asset, add an entry
+ * to `DOCTOR_IMAGE_IMPORT_OVERRIDES` below, and the map builder will use it
+ * instead of the half-default.
  */
 
 import { PRACTICES } from './practices.js'
-import placeholderDoctor from '../assets/doctors/AI-Doctor-img.webp'
+import doctorProfileSvg from '../assets/doctors/doctor-img.png'
+import doctorProfilePng from '../assets/doctors/AI-Doctor-img.webp'
+import placeholderDoctor from '../assets/doctors/doctor-img.png'
 
-/** Shown when no bundled asset exists for a slug or when the image fails to load */
+/** Shown when a slug is unknown or when `<img onError />` runs in the banner */
 export const FALLBACK_DOCTOR_IMAGE = placeholderDoctor
 
-/**
- * Shared “real doctor” stock image used for every practice unless overridden.
- * Replace this single filename when you swap in a new default asset.
- */
-const DEFAULT_DOCTOR_PHOTO_FILENAME = 'doctor-img.png'
+const FIRST_HALF_ASSET = doctorProfileSvg
+const SECOND_HALF_ASSET = doctorProfilePng
+
+const HALF = Math.ceil(PRACTICES.length / 2)
 
 /**
- * Slug → filename in `src/assets/doctors/`. Only list entries that differ from the default.
- * Add lines here as unique photos become available.
+ * Optional per-slug imports (fill when you have unique files). Example:
+ *   import shorser from '../assets/doctors/Dr-Shorser.webp'
+ *   export const DOCTOR_IMAGE_IMPORT_OVERRIDES = { 'dr-m-shorser': shorser }
+ * @type {Record<string, string | undefined>}
  */
-const DOCTOR_IMAGE_FILENAME_OVERRIDES = {
-  'dr-m-shorser': 'AI-Doctor-img.webp',
-  'AI-Doctor-img.webp': 'AI-Doctor-img.webp',
-  'reyes-s-dr': 'AI-Doctor-img.webp',
-  'dr-george-elias': 'AI-Doctor-img.webp',
-  'dr-yaw-okraku': 'AI-Doctor-img.webp',
-  'dr-tom-veiledal': 'AI-Doctor-img.webp',
-  'dr-s-fenwick-dr-r-klein-associates-64': 'AI-Doctor-img.webp',
-  'dr-s-fenwick-dr-r-klein-associates': 'AI-Doctor-img.webp',
-  'invisalign-toronto': 'AI-Doctor-img.webp',
-  'upper-beaches-dental': 'AI-Doctor-img.webp',
-  'california-dental-group-of-huntington-beach': 'AI-Doctor-img.webp',
-  
+export const DOCTOR_IMAGE_IMPORT_OVERRIDES = {
+  // 'example-slug': someImportedUrl,
+}
+
+/**
+ * @param {number} index - Index in `PRACTICES`
+ * @param {string} slug
+ * @returns {string} Vite asset URL
+ */
+function resolveImageForPractice(index, slug) {
+  const override = DOCTOR_IMAGE_IMPORT_OVERRIDES[slug]
+  if (override) return override
+  return index < HALF ? FIRST_HALF_ASSET : SECOND_HALF_ASSET
 }
 
 const PRACTICE_SLUGS = PRACTICES.map((p) => p.slug)
 
-/** @type {Record<string, string>} */
+/** Hint for which asset applies (not used at runtime beyond debugging) */
 export const DOCTOR_IMAGE_FILENAME_BY_SLUG = Object.fromEntries(
-  PRACTICE_SLUGS.map((slug) => [
-    slug,
-    DOCTOR_IMAGE_FILENAME_OVERRIDES[slug] ?? DEFAULT_DOCTOR_PHOTO_FILENAME,
+  PRACTICES.map((p, i) => [
+    p.slug,
+    DOCTOR_IMAGE_IMPORT_OVERRIDES[p.slug] != null
+      ? 'import-override'
+      : i < HALF
+        ? 'doctor-profile.svg'
+        : 'doctor-profile-1.png',
   ]),
 )
 
-const doctorAssetModules = import.meta.glob('../assets/doctors/*.{webp,png,jpg,jpeg,avif}', {
-  eager: true,
-  import: 'default',
-})
-
-const filenameToUrl = new Map(
-  Object.entries(doctorAssetModules).map(([path, url]) => {
-    const normalized = path.replace(/\\/g, '/')
-    const basename = normalized.slice(normalized.lastIndexOf('/') + 1)
-    return [basename, url]
-  }),
-)
-
 /**
- * @param {string | undefined} filename
- * @returns {string | undefined} Vite-resolved URL when the file exists on disk
- */
-function resolveDoctorAssetUrl(filename) {
-  if (!filename) return undefined
-  return filenameToUrl.get(filename)
-}
-
-/**
- * Slug → resolved image URL, or fallback SVG when the file is absent from the bundle.
+ * Slug → bundled image URL
  * @type {Record<string, string>}
  */
 export const DOCTOR_IMAGES_BY_SLUG = Object.fromEntries(
-  PRACTICE_SLUGS.map((slug) => {
-    const filename = DOCTOR_IMAGE_FILENAME_BY_SLUG[slug]
-    const url = resolveDoctorAssetUrl(filename)
-    return [slug, url ?? FALLBACK_DOCTOR_IMAGE]
-  }),
+  PRACTICES.map((p, i) => [p.slug, resolveImageForPractice(i, p.slug)]),
 )
 
 /**
- * @param {string | undefined} slug - Route slug for the current practice
- * @returns {string} URL safe for `<img src={...}>`
+ * @param {string | undefined} slug - Current route / practice slug
+ * @returns {string} Value for `<img src={...}>`
  */
 export function getDoctorImage(slug) {
   if (!slug || typeof slug !== 'string') {
