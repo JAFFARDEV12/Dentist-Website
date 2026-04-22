@@ -9,7 +9,7 @@ export default function PatientFaqsSection() {
   return (
     <section id="faqs" className="scroll-mt-[88px] bg-[#f6f9ff]  py-2 sm:py-12 lg:py-25">
       <div className={PAGE_CONTAINER}>
-        <header className="mx-auto max-w-[520px] text-center">
+        <header className="mx-auto max-w-[520px] pb-[20px] text-center">
           <h2 className="text-[36px]  font-bold tracking-[-0.01em] text-[#101a2f] sm:text-[46px]">
             Patient FAQs
           </h2>

@@ -7,12 +7,13 @@ export default function OurExpertiseSection() {
   return (
     <section id="expertise" className="scroll-mt-[88px] bg-white py-12 sm:py-16 lg:py-20">
       <div className={PAGE_CONTAINER}>
-        <header className=" mx-auto  max-w-[680px] text-center">
+        <header className=" mx-auto  max-w-[680px] pb-[20px] text-center">
           <h2 className="text-center text-[48px] font-bold leading-[48px] tracking-normal text-[#101a2f] [font-family:'Plus_Jakarta_Sans',ui-sans-serif,system-ui,sans-serif]">
             {expertiseData.title}
           </h2>
           <p className="mt-4 text-[16px]  leading-[1.3] font-normal text-[#3D4946] sm:text-[18px]">{expertiseData.subtitle}</p>
         </header>
+     
 
         <div className="mt-10 grid min-w-0 grid-cols-1 gap-8 sm:mt-12 lg:mt-14 lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:items-start lg:gap-10 xl:gap-12">
           <div className="min-w-0 max-w-full">
