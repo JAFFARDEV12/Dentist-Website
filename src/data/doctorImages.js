@@ -9,7 +9,7 @@
  */
 
 import { PRACTICES } from './practices.js'
-import placeholderDoctor from '../assets/doctors/placeholder-doctor.png'
+import placeholderDoctor from '../assets/doctors/AI-Doctor-img.webp'
 
 /** Shown when no bundled asset exists for a slug or when the image fails to load */
 export const FALLBACK_DOCTOR_IMAGE = placeholderDoctor
@@ -18,7 +18,7 @@ export const FALLBACK_DOCTOR_IMAGE = placeholderDoctor
  * Shared “real doctor” stock image used for every practice unless overridden.
  * Replace this single filename when you swap in a new default asset.
  */
-const DEFAULT_DOCTOR_PHOTO_FILENAME = 'doctor-profile.svg'
+const DEFAULT_DOCTOR_PHOTO_FILENAME = 'doctor-img.png'
 
 /**
  * Slug → filename in `src/assets/doctors/`. Only list entries that differ from the default.

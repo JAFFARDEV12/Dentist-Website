@@ -26,7 +26,7 @@ export const testimonialsData = {
       service: 'Teeth Lightening',
       desktopHeight: 300,
       quote:
-        '"Got my teeth lightening in a most professional way. Wil definitely consider John Doe for future."',
+        '"Got my teeth lightening in a most professional way. Will definitely consider John Doe for future."',
       rating: 5,
     },
   ],

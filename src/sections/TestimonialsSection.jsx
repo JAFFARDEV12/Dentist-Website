@@ -7,7 +7,7 @@ export default function TestimonialsSection() {
   const { practiceName } = usePractice()
 
   return (
-    <section id="testimonials" className="scroll-mt-[88px] bg-white py-12 sm:py-16 lg:py-20">
+    <section id="testimonials" className="scroll-mt-[88px] bg-white py-2 sm:py-12 lg:py-25">
       <div className={PAGE_CONTAINER}>
         <header className="mx-auto max-w-[820px]  text-center">
           <h2 className="text-[34px] leading-[1.1] font-extrabold tracking-[-0.01em] text-[#121a2e] sm:text-[36px]">

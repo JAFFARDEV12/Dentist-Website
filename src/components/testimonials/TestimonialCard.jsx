@@ -68,7 +68,7 @@ export default function TestimonialCard({ testimonial, featured = false, practic
         <RatingStars count={testimonial.rating} className="mt-1" />
       </header>
       <blockquote className="mt-5 text-[18px] leading-[29.25px] font-normal italic text-[#05345C]">
-        {testimonial.quote}
+        {personalizeTestimonialQuote(testimonial.quote, practiceName)}
       </blockquote>
       <footer className="mt-6 pt-0">
         <p className="text-[17px] leading-none font-extrabold text-[#05345C] md:text-[20px]">{testimonial.name}</p>

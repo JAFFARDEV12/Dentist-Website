@@ -15,7 +15,14 @@ export default function ServiceThumbnail({ type }) {
 
   return (
     <div className="h-full w-full overflow-hidden rounded-[48px] bg-[#e9eff8]">
-      <img src={imageSource} alt="" className="h-full w-full object-cover" loading="lazy" />
+      <img
+        src={imageSource}
+        alt=""
+        className="h-full w-full object-contain"
+        width={214}
+        height={192}
+        loading="lazy"
+      />
     </div>
   )
 }
