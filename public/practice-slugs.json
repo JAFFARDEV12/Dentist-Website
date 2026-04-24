@@ -348,5 +348,40 @@
     "practiceNo": 70,
     "slug": "park-lawn-smiles-dental",
     "practiceName": "Park Lawn Smiles Dental"
+  },
+  {
+    "practiceNo": 71,
+    "slug": "ana-pesaturo",
+    "practiceName": "Ana Pesaturo"
+  },
+  {
+    "practiceNo": 72,
+    "slug": "dave-king",
+    "practiceName": "Dave King"
+  },
+  {
+    "practiceNo": 73,
+    "slug": "dr-julia-michelin",
+    "practiceName": "Dr. Julia Michelin"
+  },
+  {
+    "practiceNo": 74,
+    "slug": "dr-mark-whitefield-afaaid-aaacd",
+    "practiceName": "Dr. Mark Whitefield, AFAAID, AAACD"
+  },
+  {
+    "practiceNo": 75,
+    "slug": "edward-j-zuckerberg-d-d-s-f-a-g-d",
+    "practiceName": "Edward J. Zuckerberg, D.D.S.,F.A.G.D."
+  },
+  {
+    "practiceNo": 76,
+    "slug": "maryjane-hanlon",
+    "practiceName": "MaryJane Hanlon"
+  },
+  {
+    "practiceNo": 77,
+    "slug": "paul-farsai-dmd-mph-facd-fpfa",
+    "practiceName": "Paul Farsai DMD, MPH, FACD, FPFA"
   }
 ]

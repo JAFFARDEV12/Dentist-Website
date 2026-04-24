@@ -1,4 +1,4 @@
-/** Practices 51–70 (Canada) */
+/** Practices 51–77 (Canada + additional) */
 export const PRACTICES_CA = [
   {
     practiceNo: 51,
@@ -140,5 +140,55 @@ export const PRACTICES_CA = [
     dentistOwner: 'Park Lawn Smiles Dental',
     phone: '6474830545',
     location: 'Canada',
+  },
+  {
+    practiceNo: 71,
+    practiceName: 'Ana Pesaturo',
+    dentistOwner: 'Ana Pesaturo',
+    phone: '13052837500',
+    location: 'USA',
+  },
+  {
+    practiceNo: 72,
+    practiceName: 'Dave King',
+    dentistOwner: 'Dave King',
+    phone: '18162869026',
+    location: 'USA',
+  },
+  {
+    practiceNo: 73,
+    practiceName: 'Dr. Julia Michelin',
+    dentistOwner: 'Dr. Julia Michelin',
+    phone: '66 98 292 5035',
+    location: 'USA',
+  },
+  {
+    practiceNo: 74,
+    practiceName: 'Dr. Mark Whitefield, AFAAID, AAACD',
+    dentistOwner: 'Dr. Mark Whitefield, AFAAID, AAACD',
+    phone: '16154734947',
+    location: 'USA',
+  },
+  {
+    practiceNo: 75,
+    practiceName: 'Edward J. Zuckerberg, D.D.S.,F.A.G.D.',
+    dentistOwner: 'Edward J. Zuckerberg, D.D.S.,F.A.G.D.',
+    phone: '19146468591',
+    location: 'USA',
+  },
+  {
+    practiceNo: 76,
+    practiceName: 'MaryJane Hanlon',
+    dentistOwner: 'MaryJane Hanlon',
+    phone: '16177192200',
+    email: 'drmjhanlon@aol.com',
+    location: 'USA',
+  },
+  {
+    practiceNo: 77,
+    practiceName: 'Paul Farsai DMD, MPH, FACD, FPFA',
+    dentistOwner: 'Paul Farsai DMD, MPH, FACD, FPFA',
+    phone: '16179051052',
+    location: 'USA',
   },
 ]
