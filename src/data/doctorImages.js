@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Central registry for banner doctor photos (all practices in `PRACTICES` + custom aliases).
  */
 
@@ -11,7 +11,7 @@ import daveKing from '../assets/doctors/Prospect Pics/Dave King.png'
 import drJuliaMichelin from '../assets/doctors/Prospect Pics/Dr. Julia Michelin.png'
 import drMarkWhitefield from '../assets/doctors/Prospect Pics/Dr. Mark Whitefield, AFAAID, AAACD.png'
 import edwardJZuckerberg from '../assets/doctors/Prospect Pics/Edward J. Zuckerberg, D.D.S.,F.A.G.D..png'
-import maryJaneHanlon from '../assets/doctors/Prospect Pics/MaryJane Hanlon.png'
+import maryJaneHanlon from '../assets/doctors/Prospect Pics/maryjane-hanlon.webp'
 import paulFarsai from '../assets/doctors/Prospect Pics/Paul Farsai DMD, MPH, FACD, FPFA.png'
 
 export const FALLBACK_DOCTOR_IMAGE = placeholderDoctor
@@ -43,7 +43,7 @@ const PROSPECT_IMAGES_BY_DOCTOR_NAME = {
     image: edwardJZuckerberg,
     filename: 'Edward J. Zuckerberg, D.D.S.,F.A.G.D..png',
   },
-  'maryjane hanlon': { image: maryJaneHanlon, filename: 'MaryJane Hanlon.png' },
+  'maryjane hanlon': { image: maryJaneHanlon, filename: 'maryjane-hanlon.webp' },
   'paul farsai dmd mph facd fpfa': {
     image: paulFarsai,
     filename: 'Paul Farsai DMD, MPH, FACD, FPFA.png',
@@ -82,7 +82,7 @@ export const DOCTOR_IMAGE_FILENAME_BY_SLUG = Object.fromEntries([
   ['dr-julia-michelin', 'Dr. Julia Michelin.png'],
   ['dr-whitefield-afaaid-aaacd', 'Dr. Mark Whitefield, AFAAID, AAACD.png'],
   ['edward-j-zuckerberg-dds-fagd', 'Edward J. Zuckerberg, D.D.S.,F.A.G.D..png'],
-  ['maryjane-hanlon', 'MaryJane Hanlon.png'],
+  ['maryjane-hanlon', 'maryjane-hanlon.webp'],
   ['paul-farsai-dmd-mphfacd-fpfa', 'Paul Farsai DMD, MPH, FACD, FPFA.png'],
 ])
 
